@@ -1,3 +1,11 @@
 
+from brownie import SimpleStorage, accounts
+
+
 def main():
-    print("hello mee")
+    account = accounts[0]
+    simple_storage_contract = SimpleStorage.deploy({"from": account})
+    print(simple_storage_contract.number())
+
+    simple_storage_contract.setNumber(222, {"from": account})
+    print(simple_storage_contract.number())
