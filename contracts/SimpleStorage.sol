@@ -6,4 +6,4 @@ contract SimpleStorage {
     function setNumber(uint256 newNumber) public {
         number = newNumber;
     }
-}
+}   
